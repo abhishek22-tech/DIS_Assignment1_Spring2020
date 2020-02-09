@@ -95,26 +95,19 @@ namespace Assignment1_Spring2020
                 int Secofmin = Inputedmin * 60;
                 int Secofsec = Earthtime.Second;
                 int TotalSec = Secofhr + Secofmin + Secofsec;
-                //Console.WriteLine("Total seconds of enetered time are:" + TotalSec);
                 double USFSec = TotalSec / 45;
-                //Console.WriteLine(USFSec);
                 double USFMin = USFSec / 60;
-                //Console.WriteLine(USFMin);
                 decimal USFMIN = Convert.ToDecimal(USFMin);
                 decimal USFHour = decimal.Truncate(USFMIN);
                 String HOUR = Convert.ToString(USFHour);
                 Console.WriteLine("The hours of USF World ARE:" + USFHour);
                 decimal USFMIN1 = USFMIN - Math.Truncate(USFMIN);
-                //Console.WriteLine(USFMIN1);
                 decimal USFMINS = USFMIN1 * 60;
-                //Console.WriteLine(USFMINS);
                 decimal USFMINSFINAL = decimal.Truncate(USFMINS);
                 String MIN = Convert.ToString(USFMINSFINAL);
                 Console.WriteLine(USFMINSFINAL);
                 decimal USFSEC = USFMINS - Math.Truncate(USFMINS);
-                //Console.WriteLine(USFSEC);
                 decimal USFSEC1 = USFSEC * 45;
-                //Console.WriteLine(USFSEC1);
                 decimal USFSECFINAL = decimal.Truncate(USFSEC1);
                 String SECONDS = Convert.ToString(USFSECFINAL);
                 Console.WriteLine(USFSECFINAL);
@@ -148,7 +141,7 @@ namespace Assignment1_Spring2020
 
                     }
 
-                    if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0)
+                    if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) /* Checking if number divisible by 3,5 and 7 */
 
                     {
 
@@ -156,7 +149,7 @@ namespace Assignment1_Spring2020
 
                     }
 
-                    else if (i % 5 == 0 && i % 7 == 0)
+                    else if (i % 5 == 0 && i % 7 == 0) /* Checking if number divisible by 5 and 7 */
 
                     {
 
@@ -164,7 +157,7 @@ namespace Assignment1_Spring2020
 
                     }
 
-                    else if (i % 3 == 0 && i % 5 == 0)
+                    else if (i % 3 == 0 && i % 5 == 0)  /* Checking if number divisible by 3 and 5 */
 
                     {
 
@@ -172,7 +165,7 @@ namespace Assignment1_Spring2020
 
                     }
 
-                    else if (i % 3 == 0 && i % 7 == 0)
+                    else if (i % 3 == 0 && i % 7 == 0)   /* Checking if number divisible by 3 and 7 */
 
                     {
 
@@ -227,7 +220,7 @@ namespace Assignment1_Spring2020
 
 
 
-        static bool IsPalindrome(string value)
+        static bool IsPalindrome(string value)  /* Method to  check palindrome */
 
         {
 
@@ -267,7 +260,7 @@ namespace Assignment1_Spring2020
 
         }
 
-        public static void PalindromePairs(string[] words)
+        public static void PalindromePairs(string[] words) /* Combining the strings and checking if plaindrome */
         {
             try
             {
@@ -324,7 +317,7 @@ namespace Assignment1_Spring2020
         {
             try
             {
-                if (n4 % 4 == 0)
+                if (n4 % 4 == 0)    /* if number of stones is multiple of 4 first player will always loose */
                 {
                     Console.WriteLine("false");
                 }
